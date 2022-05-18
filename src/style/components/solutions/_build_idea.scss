@@ -1,0 +1,90 @@
+.build {
+  width: 100%;
+  padding: 0 2rem;
+  background: $black-background;
+  position: relative;
+  overflow: hidden;
+
+  &_container {
+    max-width: 1080px;
+    padding: 10rem 0;
+
+    @include core_a {
+      &_text {
+        padding-right: 2rem !important;
+      }
+    }
+
+    @include contact_a {
+      img {
+        height: 20rem !important;
+      }
+    }
+    @include role_a {
+      &_text {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &_text {
+      padding-right: 10rem;
+
+      h2 {
+        color: #d6e1e1;
+        line-height: 3rem;
+
+        span {
+          color: $text-orange;
+        }
+      }
+
+      p {
+        color: $text-gray;
+        font-weight: 300 !important;
+        max-width: 50rem;
+      }
+      .ant-btn-primary {
+        margin-top: 0.8rem;
+        @include btn_primary;
+        width: 13rem !important;
+      }
+    }
+  }
+
+  @include role_a {
+    &_container {
+      flex-direction: column-reverse !important;
+      text-align: center;
+      gap: 4rem;
+      padding: 8rem 4rem 6rem 4rem !important;
+
+      &_text {
+        padding-right: 0 !important;
+      }
+    }
+  }
+  &_bground {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 799;
+
+    img:nth-of-type(1) {
+      position: absolute;
+      left: 0;
+      bottom: -1rem;
+    }
+    img:nth-of-type(2) {
+      position: absolute;
+      right: 0;
+      top: -1rem;
+    }
+    img {
+      height: 8rem;
+      width: auto;
+    }
+  }
+}

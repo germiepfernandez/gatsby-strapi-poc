@@ -1,0 +1,113 @@
+.sticky {
+  // box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  padding: 1.6rem 0 !important;
+  width: 100vw;
+  z-index: 1000;
+  background-color: white !important;
+  border-bottom: none !important;
+}
+.navbar {
+  // border-bottom: 1px solid #3cc2dd15;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: white !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
+  padding: 2rem 0;
+  background: unset;
+  transition: 0.2s;
+
+  &_content {
+    width: 1080px;
+    position: relative;
+    //
+
+    &_left {
+      z-index: 1001;
+      cursor: pointer;
+      gap: 1.5rem;
+
+      img {
+        height: 3.8rem;
+        width: auto;
+        cursor: pointer;
+      }
+      p {
+        color: $text-black;
+        font-weight: 700 !important;
+        transition: 0.5s;
+
+        &:hover {
+          color: $primary_color;
+        }
+        &:active {
+          color: $text-orange;
+        }
+      }
+    }
+    &_center {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .ant-tabs {
+        @include tabs_nav;
+        .ant-tabs-nav-wrap {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      p {
+        pointer-events: initial;
+        color: $text-gray;
+        font-weight: 500 !important;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          color: $text-orange;
+        }
+        &:active {
+          color: $primary_color;
+        }
+      }
+    }
+    &_right {
+      z-index: 1001;
+      p {
+        color: $primary_color;
+        font-weight: 500 !important;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+          color: $text-orange;
+        }
+        &:active {
+          color: $text-gray;
+        }
+      }
+    }
+    &_menu {
+      display: none;
+    }
+  }
+  .nav_menu {
+    display: none;
+  }
+}
+.navbarexpanded {
+  background: white;
+  z-index: 1000;
+}

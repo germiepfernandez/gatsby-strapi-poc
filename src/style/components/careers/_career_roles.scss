@@ -1,0 +1,184 @@
+.careerroles {
+  width: 100%;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &_container {
+    max-width: 860px;
+    gap: 2rem;
+
+    &_title {
+      position: relative;
+      max-width: 318px;
+      z-index: 799;
+      margin-bottom: 1rem;
+
+      h2 {
+        color: $text-black;
+        line-height: 4rem;
+        z-index: 800;
+      }
+      p {
+        margin-top: 1rem;
+        color: $primary_color;
+      }
+      img {
+        position: absolute;
+        top: 3rem;
+        left: 0.8rem;
+        width: 100%;
+        height: auto;
+      }
+    }
+    &_cards {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include role_a {
+        &_card {
+          align-items: center;
+          min-width: 38rem !important;
+        }
+        &_card:nth-of-type(1),
+        &_card:nth-of-type(3),
+        &_card:nth-of-type(5) {
+          flex-direction: row;
+        }
+        &_card:nth-of-type(2),
+        &_card:nth-of-type(4) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &_card {
+        padding: 4rem;
+        margin: 0.4rem 0;
+        flex: 0 0 33.333333%;
+        min-width: 280px;
+        border-radius: 5px;
+        transition: 0.5s;
+
+        img {
+          height: 10rem !important;
+          transition: transform 0.2s;
+          cursor: pointer;
+          margin-bottom: 1rem;
+          margin-right: -0.8rem;
+        }
+
+        @include role_a {
+          .text {
+            text-align: left;
+          }
+        }
+
+        .text {
+          p:nth-of-type(1) {
+            color: $text-black;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: -2rem;
+            transition: 0.3s;
+          }
+          p:nth-of-type(2) {
+            margin-top: 1rem;
+            color: $text-gray;
+            font-weight: 300 !important;
+          }
+        }
+        @include role_a {
+          img {
+            height: 11rem !important;
+          }
+        }
+        img {
+          height: 14rem;
+          width: auto;
+        }
+        &:hover {
+          cursor: pointer;
+          background: #e9f7fb;
+
+          img {
+            transform: scale(1.15) !important;
+          }
+          .text {
+            p:nth-of-type(1) {
+              color: $primary_color;
+            }
+          }
+        }
+        &:active {
+          img {
+            transform: scale(0.9) !important;
+          }
+          .text {
+            p:nth-of-type(1) {
+              color: #2a889b;
+            }
+          }
+        }
+      }
+    }
+    &_message {
+      margin-top: 2rem;
+      background: #ecfafd;
+      padding: 0.8rem 1.4rem;
+
+      svg {
+        color: $text-orange;
+        height: 1.6rem;
+        width: auto;
+        animation: mymove 1s infinite;
+      }
+      @keyframes mymove {
+        0% {
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+        }
+        90% {
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+        }
+        30% {
+          transform: scale(0.8);
+          -webkit-transform: scale(0.8);
+        }
+      }
+      p {
+        color: #829197;
+      }
+    }
+  }
+  &_triangletop,
+  &_trianglebot {
+    @include triangle_bground;
+  }
+  &_triangletop {
+    top: 0;
+    border-top: 6rem solid white;
+  }
+  &_trianglebot {
+    border-bottom: 6rem solid white;
+    bottom: 0;
+  }
+  //
+  //background
+  &_bground_a,
+  &_bground_b {
+    position: absolute;
+    height: 13rem;
+    width: auto;
+  }
+  &_bground_a {
+    left: 0;
+    top: 0;
+  }
+  &_bground_b {
+    bottom: 0;
+    right: 0;
+  }
+}

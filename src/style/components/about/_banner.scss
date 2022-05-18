@@ -1,0 +1,42 @@
+.aboutbanner {
+  width: 100%;
+  padding: calc(16rem + 70px) 0 16rem 0;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+  background: $black-background;
+
+  @include mobile {
+    &_main {
+      padding: 4rem 2rem !important;
+
+      p:nth-of-type(1) {
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  &_main {
+    gap: 2.2rem;
+    padding: 5rem 4rem;
+    margin-top: -4rem;
+    z-index: 800;
+    //
+    p:nth-of-type(1) {
+      color: #ecfafd;
+      max-width: 80rem;
+      letter-spacing: -1.5px;
+
+      span {
+        color: $primary_color;
+      }
+    }
+    p:nth-of-type(2) {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+      color: #d5eef6;
+      max-width: 602px;
+    }
+  }
+}

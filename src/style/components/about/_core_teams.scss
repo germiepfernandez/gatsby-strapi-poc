@@ -1,0 +1,180 @@
+.core_teams_space {
+  width: 100%;
+  height: 8rem;
+  background-color: white;
+}
+.core_teams {
+  background-color: $black-background;
+  width: 100%;
+  position: relative;
+  padding-bottom: 8rem;
+  //
+  &_content {
+    z-index: 800;
+    max-width: 1080px;
+
+    gap: 6rem;
+
+    .cards_container {
+      flex-wrap: wrap;
+      margin-top: -8rem;
+
+      @include showcase_card;
+    }
+    .cards_container_mobile {
+      display: none;
+    }
+
+    @include core_a {
+      .cards_container_mobile {
+        display: block;
+        margin-top: -6rem;
+
+        .card {
+          height: 24rem;
+          width: 23rem;
+          position: relative;
+          //
+          .title {
+            z-index: 800;
+            position: absolute;
+            top: 2rem;
+            left: 3rem;
+
+            &_group {
+              margin-bottom: 0.8rem;
+
+              p,
+              h1,
+              h2 {
+                color: #ecfafd;
+              }
+              h2 {
+                margin-top: 0.5rem;
+                line-height: 2.6rem;
+              }
+              p {
+                font-size: 10px;
+              }
+              img {
+                height: 4rem;
+                width: auto;
+                position: unset;
+              }
+            }
+            &_group:nth-of-type(1),
+            &_group:nth-of-type(2) {
+              position: relative;
+              .line {
+                background: #a8e1f0;
+                height: 1px;
+                width: 16.5rem;
+                position: absolute;
+                bottom: -0.4rem;
+                left: -0.2rem;
+              }
+            }
+          }
+          img {
+            z-index: 799;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 26rem;
+            width: 25rem;
+          }
+        }
+      }
+      .cards_container {
+        display: none;
+      }
+    }
+
+    .title {
+      width: 18rem;
+      position: relative;
+      z-index: 800;
+
+      h2 {
+        color: #ecfafd;
+      }
+      img {
+        position: absolute;
+        top: 1.2rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 799;
+      }
+      @include mobile {
+        img {
+          top: 0.3rem;
+        }
+      }
+    }
+    .card_team {
+      //
+      margin-top: -4rem;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include tablet_large {
+        &_item {
+          padding: 1.5rem 3rem !important;
+        }
+      }
+
+      &_item {
+        padding: 4rem;
+        flex: 0 0 33.333333%;
+        min-width: 300px;
+
+        img {
+          height: 14rem;
+          width: auto;
+        }
+        p:nth-of-type(1) {
+          color: $text-pearl;
+          font-size: 22px;
+          font-weight: 500;
+          //jehu book mark
+          margin-top: -2rem;
+        }
+
+        p:nth-of-type(2) {
+          margin-top: 1rem;
+          color: $text-gray;
+          font-weight: 300 !important;
+        }
+      }
+    }
+  }
+  //triangles
+  &_triangletop,
+  &_trianglebot {
+    @include triangle_bground;
+  }
+  &_triangletop {
+    top: 0;
+    border-top: 6rem solid white;
+  }
+  &_trianglebot {
+    border-bottom: 6rem solid white;
+    bottom: 0;
+  }
+  //background
+  .core_team_bground_a,
+  .core_team_bground_b {
+    position: absolute;
+    height: 8rem;
+    width: auto;
+    bottom: 0;
+  }
+  .core_team_bground_a {
+    left: 0;
+  }
+  .core_team_bground_b {
+    right: 0;
+  }
+}

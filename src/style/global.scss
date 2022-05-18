@@ -1,0 +1,47 @@
+// GLOBAL
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Code:wght@300;400;500;600&display=swap');
+@import '../style/global/config';
+@import '../style/global/root';
+@import '../style/global/utility';
+@import '../style/global/media-query';
+@import 'antd/dist/antd.css';
+
+// COMPONENTS
+//:: home
+@import '../style/components/home/not_found';
+@import '../style/components/home/navbar';
+@import '../style/components/home/banner';
+@import '../style/components/home/solutions';
+@import '../style/components/home/projects';
+@import '../style/components/home/clients';
+@import '../style/components/home/roles';
+@import '../style/components/home/facts';
+@import '../style/components/home/contact';
+@import '../style/components/home/footer';
+//:: home media
+@import '../style/components/home/subcomponents/navbar_media';
+
+//:: about
+@import '../style/components/about/banner';
+@import '../style/components/about/about';
+@import '../style/components/about/core_teams';
+@import '../style/components/about/proud';
+
+//:: solutions
+@import '../style/components/solutions/banner';
+@import '../style/components/solutions/solutions_main';
+@import '../style/components/solutions/build_idea';
+
+//:: careers
+@import '../style/components/careers/career_banner';
+@import '../style/components/careers/career_roles';
+@import '../style/components/careers/career_setup';
+@import '../style/components/careers/career_top_rated';
+
+//modal
+@import '../style/components/modal/modal_quiz';
+@import '../style/components/modal/modal_initial';
+@import '../style/components/modal/modal_mutiple';
+
+//dunno
+@import '../style/components/home/carousel_two';

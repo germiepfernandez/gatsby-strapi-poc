@@ -1,0 +1,400 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Archivo', sans-serif;
+}
+#root {
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  position: relative;
+}
+body {
+  margin: 0 auto;
+  overscroll-behavior-y: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 3px; //vertical
+}
+::-webkit-scrollbar-track {
+  background: $text-gray;
+}
+::-webkit-scrollbar-thumb {
+  background: $light_orange_color;
+  border-radius: 0.1rem;
+}
+.overflow-control {
+  overflow: hidden;
+}
+
+// .App {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+.main_container {
+  // height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+p,
+a {
+  text-decoration: none;
+  line-height: 2rem;
+  font-size: clamp(var(--h6Min), var(--fontScaler), var(--h6Max));
+  letter-spacing: 0px !important;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+textarea {
+  resize: none;
+}
+/* HEADINGS */
+h1 {
+  font-weight: 700;
+  font-size: clamp(var(--h1Min), var(--fontScaler), var(--h1Max));
+}
+h2 {
+  letter-spacing: -1px;
+  font-weight: 700;
+  font-size: clamp(var(--h2Min), var(--fontScaler), var(--h2Max));
+}
+h3 {
+  font-weight: 700;
+  font-size: clamp(var(--h3Min), var(--fontScaler), var(--h3Max));
+}
+.display_1 {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 85px;
+}
+.display_2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 70px;
+}
+.display_3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin-bottom: 0;
+}
+/* END OF HEADINGS */
+
+//Global Tab control
+.tab-active {
+  display: block;
+}
+.tab-inactive {
+  display: none;
+}
+
+/* FONTS */
+.text-underline {
+  text-decoration: underline;
+}
+.text-upper {
+  text-transform: uppercase;
+}
+.text-lower {
+  text-transform: lowercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.weight--regular {
+  font-weight: 400;
+}
+.weight--medium {
+  font-weight: 500;
+}
+.weight--semibold {
+  font-weight: 600;
+}
+.weight--bold {
+  font-weight: 700;
+}
+.weight--extrabold {
+  font-weight: 800;
+}
+.weight--black {
+  font-weight: 900;
+}
+//colors
+.text-white {
+  color: white;
+}
+.text-black {
+  color: #05232e;
+}
+.text-light-black {
+  color: #374f58;
+}
+.text-info {
+  color: $info_color;
+}
+.text-success {
+  color: $success_color;
+}
+.text-warning {
+  color: $warning_color;
+}
+.text-error {
+  color: $error_color;
+}
+.text-orange {
+  color: #fb9d50;
+}
+.text-primary {
+  color: #3cc2dd;
+}
+.letter-space {
+  letter-spacing: -1px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-deafult {
+  cursor: default;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+.position-fixed {
+  position: fixed;
+}
+/* Flex */
+.d-flex {
+  display: flex;
+}
+.d-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.d-flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.d-flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.flex-auto {
+  flex: auto;
+}
+.flex-0 {
+  flex: 0;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-basis-1 {
+  flex-basis: 10%;
+}
+.flex-basis-2 {
+  flex-basis: 20%;
+}
+.flex-basis-3 {
+  flex-basis: 30%;
+}
+.flex-basis-4 {
+  flex-basis: 40%;
+}
+.flex-basis-5 {
+  flex-basis: 50%;
+}
+.flex-basis-6 {
+  flex-basis: 60%;
+}
+.flex-basis-7 {
+  flex-basis: 70%;
+}
+.flex-basis-8 {
+  flex-basis: 80%;
+}
+.flex-basis-9 {
+  flex-basis: 90%;
+}
+.gap-1-2 {
+  gap: 0.4rem;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.gap-4 {
+  gap: 4rem;
+}
+.gap-5 {
+  gap: 5rem;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-even {
+  justify-content: space-evenly;
+}
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+.align-items-stretch {
+  align-items: stretch;
+}
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+/* Margin zero */
+.m-0 {
+  margin: 0;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mtb-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.mlr-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* Margin auto */
+.m-auto {
+  margin: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mtb-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+//Scrollbar
+// ::-webkit-scrollbar {
+//   height: 5px; //horizontal
+//   width: 5px; //vertical
+// }
+// ::-webkit-scrollbar-track {
+//   background: white;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: lighten($green-color, 10%);
+//   border-radius: 0.2rem;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: var(--desiredColor);
+// }
+//Box Shadow
+// box-shadow: LEFTpx RIGHTpx ALLLIGHTpx ALLSOLIDpx rgba(0, 0, 0, 0.05);
+// -webkit-filter: drop-shadow(0 3px 20px rgba(56, 125, 255, 0.017));
+// filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));

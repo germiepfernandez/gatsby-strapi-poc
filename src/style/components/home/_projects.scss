@@ -1,0 +1,100 @@
+.project {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 8rem;
+
+  @include projects_a {
+    &_carousel {
+      padding: 0 2rem;
+      width: 100%;
+    }
+  }
+  &_carousel {
+    margin: auto;
+    max-width: 1080px;
+    @include brain_carousel;
+
+    .ant-card {
+      //
+      @include tablet {
+        &-body {
+          padding: 8rem 1rem !important;
+        }
+      }
+      &-body {
+        padding: 10rem 5rem 6rem 5rem;
+        //
+        @include tablet {
+          .carousel_container {
+            flex-direction: column-reverse;
+            gap: 2rem;
+          }
+        }
+
+        .carousel_container {
+          display: flex;
+
+          @include tablet {
+            .carousel_container_left {
+              align-items: center;
+              text-align: center;
+
+              .descriptions {
+                text-align: justify;
+              }
+            }
+          }
+
+          .carousel_container_left {
+            flex-grow: 1;
+            flex-basis: 0;
+
+            img {
+              height: 5rem;
+              width: 5rem;
+            }
+            .title {
+              p {
+                color: $text-orange;
+                font-size: 12px !important;
+              }
+              h2 {
+                color: $text-black;
+                margin-top: -0.5rem;
+              }
+            }
+            .descriptions {
+              color: $text-black;
+              gap: 0.8rem;
+
+              img {
+                margin-top: 0.4rem;
+                height: 1.2rem;
+                width: auto;
+              }
+            }
+          }
+          .carousel_container_right {
+            flex-grow: 1;
+            flex-basis: 0;
+
+            @include projects_a {
+              img {
+                height: 28rem !important;
+              }
+            }
+            @include mobile {
+              img {
+                height: 22rem !important;
+              }
+            }
+            img {
+              height: 34rem;
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

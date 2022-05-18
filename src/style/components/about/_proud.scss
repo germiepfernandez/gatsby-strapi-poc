@@ -1,0 +1,78 @@
+.proud {
+  width: 100%;
+  padding: 10rem 4rem 0 4rem;
+  margin-bottom: -3rem;
+  position: relative;
+
+  @include filipino_b {
+    &_modal {
+      flex-direction: column;
+      text-align: center;
+
+      &_text {
+        padding: 2rem 4rem !important;
+      }
+    }
+  }
+
+  @include mobile {
+    &_modal {
+      p {
+        text-align: justify !important;
+      }
+      img {
+        height: 18rem !important;
+      }
+      &_text {
+        margin-top: 2rem !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  &_modal {
+    background-color: white;
+    z-index: 800;
+    max-width: 1080px;
+    padding: 4rem;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+    -webkit-filter: drop-shadow(0 3px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(1.8rem 0 0 rgba(56, 0, 0, 0.017));
+    -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+    -webkit-filter: drop-shadow(0 3px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(1.8rem 0 0 rgba(56, 0, 0, 0.017));
+    -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+    -webkit-filter: drop-shadow(0 3px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(1.8rem 0 0 rgba(56, 0, 0, 0.017));
+
+    @include filipino {
+      img {
+        height: 25rem;
+      }
+    }
+
+    img {
+      padding: 0 2rem;
+    }
+    &_text {
+      padding: 0 2rem 0 6rem;
+
+      h2 {
+        color: $text-black;
+
+        span {
+          color: $text-orange;
+        }
+      }
+      p {
+        color: $text-gray;
+
+        span {
+          color: $text-orange;
+        }
+      }
+    }
+  }
+}

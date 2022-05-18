@@ -1,0 +1,62 @@
+.modal_multiple {
+  max-width: 1000px;
+  //   background-color: aliceblue;
+
+  &_title {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d5eef6;
+    width: 100%;
+
+    h3 {
+      color: $text-black;
+    }
+    p {
+      color: #829197;
+    }
+  }
+  &_content {
+    margin-top: 2rem;
+    width: 100%;
+
+    img {
+      flex: 1;
+      //   height: 32rem;
+      max-width: 32rem;
+      object-fit: fill;
+      object-position: center;
+    }
+    &_question {
+      &_text {
+        p:nth-of-type(1) {
+          color: $text-black;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+        p:nth-of-type(2) {
+          color: #829197;
+        }
+        .ant-radio-group {
+          margin-top: 2rem;
+        }
+      }
+      &_footer {
+        padding-top: 2rem;
+        border-top: 1px solid #d5eef6;
+
+        button {
+          @include btn_quiz;
+        }
+        div {
+          img {
+            height: 1.5rem;
+            width: auto;
+          }
+          p {
+            color: darken($primary_color, 10%);
+          }
+        }
+      }
+    }
+  }
+}
